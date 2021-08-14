@@ -5,7 +5,7 @@ Improve your vocabulary from command-line!
 ```bash
 npm i vocabul
 ```
-## Usage?
+## Usage
 ```bash
 vocabul [...arguments]
 ```
