@@ -4,12 +4,14 @@ const translate = require('./utils/translate.js');
 const { exec } = require('child_process');
 const path = require('path');
 const homeDir = require('os').homedir();
+const pkgJson = require('./package.json');
 
 (async () => {
   mkdir(`${homeDir}/.vocabul`);
 
   const action = getArg(['--action', '-a'], false);
   const help = hasArg(['--help', '-h']);
+  const version = hasArg(['--version', '-v']);
 
   if (help) {
     write([
@@ -23,8 +25,14 @@ const homeDir = require('os').homedir();
       '  --add -y [y/n]: Add translated word to dictionary',
       '  --period -p [minute]: Start action interval period',
       '  --command -c [command="notify-send"]',
+      '  --version -v: Show installed version',
       '  --help -h: Show help',
     ]);
+    exit(0);
+  }
+
+  if (version) {
+    write(pkgJson.version);
     exit(0);
   }
 
