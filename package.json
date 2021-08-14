@@ -1,0 +1,14 @@
+{
+  "name": "vocabul",
+  "version": "0.0.1",
+  "description": "Learn different language vocabulary from command-line!",
+  "bin": "./index.js",
+  "keywords": [
+    "vocabulary",
+    "learn",
+    "command-line",
+    "terminal"
+  ],
+  "author": "Amir Momenian <nainemom@gmail.com>",
+  "license": "ISC"
+}
