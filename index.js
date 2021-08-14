@@ -63,9 +63,7 @@ const pkgJson = require('./package.json');
       addToDict = addToDictQ !== 'n';
     }
     if (addToDict) {
-      dictionaryFile.content.push([
-        [word, translation],
-      ]);
+      dictionaryFile.content.push([word, translation]);
       dictionaryFile.save();
     }
     exit(0);
