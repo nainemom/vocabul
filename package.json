@@ -1,6 +1,6 @@
 {
   "name": "vocabul",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Learn different language vocabulary from command-line!",
   "bin": {
     "vocabul": "./index.js",
