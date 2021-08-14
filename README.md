@@ -1,9 +1,9 @@
 ## Vocabul
 Improve your vocabulary from command-line!
 
-### Installation?
+### Installation
 ```bash
-npm i vocabul
+npm i vocabul -g
 ```
 ## Usage
 ```bash
