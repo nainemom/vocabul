@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 const { input, write, getArg, hasArg, exit } = require('./utils/cli.js');
 const { mkdir, jsonFile } = require('./utils/files.js');
 const translate = require('./utils/translate.js');
