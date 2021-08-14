@@ -19,14 +19,14 @@ const pkgJson = require('./package.json');
     write([
       'Usage: vocabul [...arguments]',
       'Available arguments are:',
-      '  --action -a [action]: Required and Should be one of "translate", "random", or "start"',
+      '  --action -a [action]: Required and Should be one of "translate", "random", or "interval"',
       '  --dictionary -d [dictionary_name=default]: Local dictionary name',
       '  --from -f [lang_code=auto]: Source language for "translate" action',
       '  --to -t [lang_code]: Target language for "translate" action',
       '  --word -w [word]: Input word for "translate" action',
       '  --add -y [y/n=y]: Add translated word to dictionary',
-      '  --period -p [minute=1]: "start" action interval period',
-      '  --command -c [command="notify-send"]: "start" action run command',
+      '  --period -p [minute=1]: "interval" action period',
+      '  --command -c [command="notify-send"]: "interval" action run command',
       '  --version -v: Show installed version',
       '  --help -h: Show help',
     ]);
@@ -79,7 +79,7 @@ const pkgJson = require('./package.json');
     exit(0);
   }
 
-  if (action === 'start') {
+  if (action === 'interval') {
     period = getArg(['--period', '-p']) || (await input(`Interval period (minutes)? [1]`)) || '1';
     const pmil = Number(period) * 60000;
     const command = getArg(['--command', '-c'], 'notify-send');
